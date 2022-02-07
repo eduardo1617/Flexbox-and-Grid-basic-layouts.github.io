@@ -1,0 +1,480 @@
+/* colors - see style guide for docs. 
+Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
+
+:root {
+  --color1: #001219;
+  --color2: #005f73;
+  --color3: #3d9397;
+  --color4: #94d28d;
+  --color5: #e9d8a6;
+  --color6: #ee9800;
+  --color7: #ca6702;
+  --color8: #bb3e03;
+  --color9: #ae2012;
+  --color10: #9b2226;
+}
+
+/* generic site styles */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dbe5de;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  padding: 0 1rem;
+  margin: 0 auto 5rem auto;
+}
+
+section h2 {
+  font-size: 2.5rem;
+}
+
+/* header and nav styles */
+
+.header {
+  background-color: var(--color5);
+}
+
+header {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* navigation styling -  */
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: space-between;
+}
+
+nav li {
+  flex-basis: 48%;
+  margin-bottom: 0.5rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--color10);
+  display: block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: var(--color1);
+  color: var(--color5);
+}
+
+nav li:first-child a {
+  background-color: transparent;
+}
+
+/* hero style */
+.hero {
+  background-color: var(--color7);
+  text-align: center;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.hero img {
+  max-width: 100%;
+  max-height: 454px;
+}
+
+/* dando estilos a la parte de la mision */
+
+section .mission {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  line-height: 1.7;
+}
+
+section .mission .childe {
+  flex-basis: 100%;
+}
+
+/* featured image styles */
+
+#featured figure {
+  max-height: 650px;
+}
+
+#featured img {
+  object-position: 0;
+}
+
+/* popular print styles */
+.prints {
+  background-color: var(--color2);
+  color: white;
+  padding: 1rem 0 2rem 0;
+}
+
+.prints figure {
+  height: 100%;
+  max-height: 400px;
+}
+.prints ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* estilos de la parte de collections */
+/* .prints ul li {
+  flex-basis: 100%;
+  list-style: none;
+} */
+
+.prints figure,
+.featured figure {
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+  border: 10px solid;
+}
+
+.prints figcaption,
+.featured figcaption {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  opacity: 0.8;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.prints figure,
+.featured figure,
+.mission figure {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.prints figcaption a,
+.featured figcaption a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.prints figure img,
+.featured figure img {
+  width: 100%;
+  /* object-fit sirve para ajusta la imagen dentro de nuesto contenedor si estamos trabajando con altura maxima */
+  /* object-fit: cover;    
+    object-position: 0; */
+}
+
+.color2,
+.color2 a:hover {
+  border-color: var(--color2);
+  color: var(--color2);
+}
+.color3,
+.color3 a:hover {
+  border-color: var(--color3);
+  color: var(--color3);
+}
+.color4,
+.color4 a:hover {
+  border-color: var(--color4);
+  color: var(--color4);
+}
+.color6,
+.color6 a:hover {
+  border-color: var(--color6);
+  color: var(--color6);
+}
+.color7,
+.color7 a:hover {
+  border-color: var(--color7);
+  color: var(--color7);
+}
+.color8,
+.color8 a:hover {
+  border-color: var(--color8);
+  color: var(--color8);
+}
+
+/* quitandole borde al logo de mision */
+.mission figure {
+  border: none;
+}
+/* footer style */
+
+.footer {
+  background-color: var(--color5);
+}
+
+footer {
+  max-width: 1200px;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+footer h4 {
+  margin-top: 0;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: flex-start; */
+  gap: 2%;
+}
+
+
+footer address {
+  font-weight: bold;
+  margin-top: 2rem;
+  font-style: normal;
+}
+
+/* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
+
+/* At this breakpoint, transition to 2 figures per line */
+
+/* ------------------------grid section - pop art ------------------------------- */
+
+.popart img {
+  width: 100%;
+}
+
+.popart {
+  max-width: 1200px;
+  margin: 0 auto 5rem auto;
+}
+
+.popart h2 {
+  font-size: 3.375rem;
+  margin-left: 100px;
+}
+
+.popart ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* figure and figure caption styling */
+
+.popart figure {
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  border: 5px solid var(--color8);
+  border-radius: 5px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+
+.popart figure img {
+  /* image must stretch across all rows */
+  grid-row: 1/3;
+  grid-column: 1/2;
+  height: 100%;
+}
+
+.popart figcaption {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.875rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  grid-column: 1/2;
+  /* caption overlaps the last row with the image */
+  grid-row: 2/3;
+  opacity: 0.7;
+}
+
+.popart figcaption a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.popart figcaption a:hover {
+  color: var(--color8);
+}
+
+
+/*-------------------------grdd section- end ------------------------------------ */
+
+@media (min-width: 550px) {
+  section .mission {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    gap: 2%;
+  }
+
+  section .mission .childe-p {
+    flex-basis: 49%;
+  }
+
+  .prints section ul,
+  footer {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    /* gap: 2%; */
+  }
+
+  .prints  ul li {
+    flex-basis: 49%;
+  }
+
+  /* popular prints*/
+  .prints section ul li:last-child {
+    flex-basis: 100%;
+  }
+  #popular li:last-child figure img {
+    object-position: 0 -350px;
+  }
+
+
+  footer address,
+  .social {
+    flex-basis: 49%;
+  }
+
+  footer address {
+    margin-top: 0;
+  }
+
+  /* navigation var */
+  nav ul {
+    justify-content: center;
+    gap: 1.2em;
+  }
+  nav li {
+    flex-basis: auto;
+    margin-bottom: 0;
+  }
+  nav a {
+    color: var(--color1);
+    background-color: transparent;
+  }
+  nav a:hover {
+    color: var(--color2);
+    background-color: transparent;
+  }
+
+  /* ------------------grid secion start------------------------- */
+
+  .popart ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .popart ul .colspan2 {
+    grid-column: span 2;
+  }
+
+  .popart ul .colspan3 {
+    grid-column: span 3;
+  }
+
+  .popart ul .rowspan2 {
+    grid-row: span 2;
+  }
+
+  .popart figure {
+      height: 100%;
+  }
+
+  /* ---------------------grid section end ----------------------------- */
+}
+
+/* At this breakpoint, transition to 3 figures per line */
+
+@media (min-width: 800px) {
+  section .mission .childe-p {
+    flex-basis: 65.3%;
+  }
+
+  /* collections */
+  .prints section ul li,
+  .social {
+    flex-basis: 32%;
+  }
+
+  section h2 {
+    margin-left: 100px;
+  }
+
+  /* popular prints */
+  .prints section ul li:last-child {
+    flex-basis: 32%;
+  }
+  #popular li:last-child figure img {
+    object-position: 0;
+  }
+  
+  /* poner el logo en el centro */
+  nav ul {
+    justify-content: flex-end;
+  }
+
+  nav li:first-child {
+    flex-basis: auto;
+    margin: 0 auto;
+    order: 2;
+  }
+  nav li:nth-child(2),
+  nav li:nth-child(3) {
+    order: 1;
+  }
+  nav li:nth-child(4),
+  nav li:nth-child(5) {
+    order: 3;
+  }
+}
